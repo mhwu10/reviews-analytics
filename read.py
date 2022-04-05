@@ -10,10 +10,18 @@ print('Reading is done, there are', len(data), 'comments')
 
 sum_len = 0
 for dline in data:
-    sum_len = sum_len + len(dline)
+    sum_len = sum_len + len(dline) 
 
 print('The average length of comments is', sum_len / len(data), 'digitals')
 
 #print(data[0])
 #print('-----------------')
 #print(data[1])
+
+new = []
+for dline in data:
+    if len(dline) < 100:
+        new.append(dline)
+print('There are totally', len(new), 'comments smaller than 100 digitals')
+print(new[0])
+print(new[1])
