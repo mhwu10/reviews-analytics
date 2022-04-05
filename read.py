@@ -26,10 +26,15 @@ print('There are totally', len(new), 'comments smaller than 100 digitals')
 print(new[0])
 print(new[1])
 
-good = []
-for dline in data:
-    if 'good' in dline:
-        good.append(dline)
-print('There are', len(good), 'comments mentioning good')
-print(good[0])
+#good = []
+#for dline in data:
+#    if 'good' in dline:
+#        good.append(dline)
+good = [1 for dline in data if 'good' in dline]
+print(good)
+#print('There are', len(good), 'comments mentioning good')
+#print(good[0])
+
+bad = ['bad' in dline for dline in data]
+print(bad)
 
